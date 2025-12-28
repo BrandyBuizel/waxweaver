@@ -1,0 +1,24 @@
+---
+name: "oddbot"
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
+
+jobs:
+  oddbot:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: read
+      contents: read
+    steps:
+      - name: Discord
+        uses: sarisia/actions-status-discord@5ddd3b114a98457dd80a39b2f00b6a998cd69008
+        if: always()
+        with:
+          webhook: ${{secrets.DISCORD_WEBHOOK}}
+          nodetail: false
+          username: ODDBOT
+          color: 0xb02780
+          # image: https://oddcore.wiki.gg/images/a/af/Wishlist_banner.webp
+          avatar_url: https://oddcore.wiki.gg/images/8/82/Client_logo.png
