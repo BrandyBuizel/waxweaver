@@ -16,6 +16,32 @@
 ## Getting Started
 Feel free to ask questions in our [Discord Server](https://discord.gg/ZpERRbpwrP).
 
+## How to Build
+open terminal in the waxweaver folder and type in the following commands in order:
+
+```git submodule add -b 4.2 https://github.com/godotengine/godot-cpp```
+
+```cd godot-cpp```
+
+```git submodule update --init```
+
+* Windows: `scons platform=windows`
+* macOS: `scons platform=macos`
+* Linux: `scons platform=Linux`
+
+HOW TO BUILD:
+
+in the main waxweaver folder open terminal and type in :
+
+scons platform=windows
+
+(replace with whatever OS/platform you are on)
+
+
+GET EXTENSION API:
+
+scons platform=windows custom_api_file=gdextension/extension_api.json
+
 ## Ways to Contribute
 We love new contributors!
 
